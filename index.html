@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="app.css">
+    <title>Portafolio</title>
+</head>
+
+<body class="flex flex-col min-h-screen text-4xl text-matrix-components font-Quantico font-bold">
+
+    <header class="bg-matrix-footer z-20 sticky top-0">
+        <div class="mx-auto px-4 py-2 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="https://scontent.fgdl5-4.fna.fbcdn.net/v/t1.6435-9/77074392_2806294399402148_3234376627500613632_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7a1959&_nc_eui2=AeFCSek0oMLk4I5EMzuj_z_PPRusdG0kcw49G6x0bSRzDuqYLOPpR9Ps_5uEu9CHCqV3be6wRLHvSIUy5mze7EYd&_nc_ohc=d3VfMvdBLKAAX-9ovXO&_nc_oc=AQnSCZUoNI_ELZjswuW1YWFscmw66w6C1EU5PdUbIbPGtyPQm4dYoMXKj_lHpEUjCmw&_nc_ht=scontent.fgdl5-4.fna&oh=00_AfCqappC3iCr3vJiW0-6O2FGe12sEt4NPZm5ekZCFESEpA&oe=65026DA6"
+                    alt="Luis Alberto Garcia Orozco" class="w-12 h-12 mr-2 rounded-full">
+                <span class="text-xl text-matrix-text hidden lg:block">Luis Alberto Garcia Orozco</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#sobremi" class="text-matrix-text text-lg">Sobre mí</a>
+                <a href="#habilidades" class="text-matrix-text text-lg">Habilidades</a>
+                <a href="#proyectos" class="text-matrix-text text-lg">Proyectos</a>
+                <a href="#contacto" class="text-matrix-text text-lg">Contacto</a>
+            </div>
+        </div>
+        <div class="md:hidden bg-matrix-footer">
+            <div class="mx-auto px-4 py-2 flex items-center space-x-4">
+                <a href="#sobremi" class="text-matrix-text text-lg">Sobre mí</a>
+                <a href="#habilidades" class="text-matrix-text text-lg">Habilidades</a>
+                <a href="#proyectos" class="text-matrix-text text-lg">Proyectos</a>
+                <a href="#contacto" class="text-matrix-text text-lg">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+
+
+    <canvas id="matrix" class="fixed inset-0 z-0"></canvas>
+    <div class="container z-10 flex h-full flex-grow pt-6 text-center">
+        <div class="h-full w-full rounded-lg bg-black/80 py-4">
+            <div id="sobremi" class="flex h-screen w-full text-center items-center justify-center">
+                <div class="flex flex-wrap p-5 w-full justify-center items-center">
+                    <img class="rounded-full aspect-auto border-4 border-matrix-components w-70 h-70 float-left"
+                        src="https://scontent.fgdl5-4.fna.fbcdn.net/v/t1.6435-9/77074392_2806294399402148_3234376627500613632_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7a1959&_nc_eui2=AeFCSek0oMLk4I5EMzuj_z_PPRusdG0kcw49G6x0bSRzDuqYLOPpR9Ps_5uEu9CHCqV3be6wRLHvSIUy5mze7EYd&_nc_ohc=d3VfMvdBLKAAX-9ovXO&_nc_oc=AQnSCZUoNI_ELZjswuW1YWFscmw66w6C1EU5PdUbIbPGtyPQm4dYoMXKj_lHpEUjCmw&_nc_ht=scontent.fgdl5-4.fna&oh=00_AfCqappC3iCr3vJiW0-6O2FGe12sEt4NPZm5ekZCFESEpA&oe=65026DA6"
+                        alt="">
+                    <div>
+                        <strong class="text-6xl font-bold text-matrix-text-bg">
+                            Bienvenido...
+                        </strong>
+                        <p class="text-3xl text-justify">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio molestias cupiditate itaque
+                            quam voluptate, dolore sint error debitis voluptas eligendi temporibus deserunt tempora ea
+                            praesentium, iusto commodi distinctio. Tempore, molestias.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="habilidades" class="pt-10">
+                <H1 class="font-bold text-matrix-text-bg">Skills</H1>
+                <div class="flex justify-center items-center pt-10">
+                    <div class="grid grid-cols-4 gap-10">
+                        <div
+                            class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class=" invert-black-to-white h-40 w-full object-contain"
+                                src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png"
+                                alt="Imagen de la tarjeta" />
+                            <div class="border-matrix-hover h-full px-6 py-4">
+                                <div class="text-matrix-500 mb-2 text-xl font-bold text-matrix-text-bg">Unity</div>
+                                <p class="text-base">Desarrollo de videojuegos en Unity 3D y 2D</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="h-40 w-full object-contain"
+                                src="https://cdn2.unrealengine.com/ue-logo-stacked-unreal-engine-w-677x545-fac11de0943f.png"
+                                alt="Imagen de la tarjeta" />
+                            <div class="border-matrix-hover h-full px-6 py-4">
+                                <div class="text-matrix-500 mb-2 text-xl font-bold text-matrix-text-bg">Unreal Engine
+                                </div>
+                                <p class="text-base">Desarrollo de videojuegos en Unity 3D y 2D</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="h-40 w-full object-contain"
+                                src="https://download.blender.org/branding/blender_logo_socket.png"
+                                alt="Imagen de la tarjeta" />
+                            <div class="border-matrix-hover h-full px-6 py-4">
+                                <div class="text-matrix-500 mb-2 text-xl font-bold text-matrix-text-bg">Blender</div>
+                                <p class="text-base">Modelado y animacion 3D</p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class=" invert-black-to-white h-40 w-full object-contain"
+                                src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Imagen de la tarjeta" />
+                            <div class="border-matrix-hover h-full px-6 py-4">
+                                <div class="text-matrix-500 mb-2 text-xl font-bold text-matrix-text-bg">GitHub</div>
+                                <p class="text-base">Control de versiones</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="proyectos" class="pt-10">
+                <H1 class="font-bold text-matrix-text-bg">Proyectos</H1>
+                <div class="flex justify-center items-center pt-10">
+                    <div class="grid grid-cols-4 gap-10">
+                        <div
+                            class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full h-40 object-fill"
+                                src="https://live.staticflickr.com/65535/53125692654_8b91e4514b_z.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg">Render Navidad
+                                </div>
+                                <img class="float-left"
+                                    src="https://download.blender.org/branding/blender_logo_socket.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Blender</p>
+                                <p class="text-base">Un render hecho como proyecto de escuela en la Universidad de
+                                    Guadalajara
+                                </p>
+                                
+                            </div>
+                        </div>
+                        <div
+                            class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full h-40 object-fill"
+                                src="https://live.staticflickr.com/65535/53125969048_ab2a665fd9_z.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg">Render Halloween
+                                </div>
+                                <img class="float-left"
+                                    src="https://download.blender.org/branding/blender_logo_socket.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Blender</p>
+                                <p class="text-base">Un render hecho como proyecto de escuela en la Universidad de
+                                    Guadalajara
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full h-40 object-fill"
+                                src="https://live.staticflickr.com/65535/53125856588_c7e290cd57_z.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4 flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg">Animacion
+                                    Bandera</div>
+                                <img class="float-left"
+                                    src="https://download.blender.org/branding/blender_logo_socket.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Blender</p>
+                                <p class="text-base">Un animacion hecha como proyecto de escuela en la Universidad de
+                                    Guadalajara
+                                </p>
+                            </div>
+                            <a class="text-sm mt-auto text-blue-500 hover:underline" href="https://youtu.be/ri77s7Nz0zU">Video</a>
+                        </div>
+                        <div
+                            class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full h-40 object-fill"
+                                src="https://live.staticflickr.com/65535/53125578964_a9cc90e328_z.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg">Animacion
+                                    Explosión</div>
+                                <img class="float-left"
+                                    src="https://download.blender.org/branding/blender_logo_socket.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Blender</p>
+                                <p class="text-base">una animacion hecha como proyecto de escuela en la Universidad de
+                                    Guadalajara
+                                </p>
+                            </div>
+                            <a class="text-sm mt-auto text-blue-500 hover:underline" href="https://youtu.be/bEcx6pyfrJg">Video</a>
+                        </div>
+                        <div
+                            class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full h-40 object-fill"
+                                src="https://live.staticflickr.com/65535/53125775325_83dfb3db4a_z.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg">Animacion Pelos
+                                </div>
+                                <img class="float-left"
+                                    src="https://download.blender.org/branding/blender_logo_socket.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Blender</p>
+                                <p class="text-base">una animacion hecha como proyecto de escuela en la Universidad de
+                                    Guadalajara
+                                </p>
+                            </div>
+                            <a class="text-sm mt-auto text-blue-500 hover:underline" href="https://youtu.be/k7gF_7jswpY">Video</a>
+                        </div>
+                        <div
+                            class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full object-fill h-40 object-contain"
+                                src="https://live.staticflickr.com/65535/53125812599_7a4c4402cf_c.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg">Juego de Ping
+                                    Pong</div>
+                                <img class="float-left invert-black-to-white"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Unity</p>
+                                <p class="text-base">Juego de ping pong usando physics material y controles de telefono
+                                    Movil
+                                </p>
+                                <div class="text-sm text-blue-500 flex justify-around pt-6">
+                                    <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                        href="#">
+                                        <i class="fa-brands fa-github fa-2xl"></i>
+                                        Repositorio Git
+                                    </a>
+                                    <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                        href="#">
+                                        <i class="fa-solid fa-gamepad fa-2xl"></i>
+                                        !Pruebame¡
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full object-fill h-40 object-contain"
+                                src="https://live.staticflickr.com/65535/53124980227_6a76fbcdeb_c.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg">Obstaculos</div>
+                                <img class="float-left invert-black-to-white"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Unity</p>
+                                <p class="text-base">Juego de Obstaculos prototipado con poderes y vidas, este fue el primer juego que cree 
+                                </p>
+                                <div class="text-sm text-blue-500 flex justify-around pt-6">
+                                    <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                        href="https://github.com/LuisAlberto22/Obstaculos">
+                                        <i class="fa-brands fa-github fa-2xl"></i>
+                                        Repositorio Git
+                                    </a>
+                                    <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                        href="#">
+                                        <i class="fa-solid fa-gamepad fa-2xl"></i>
+                                        !Pruebame¡
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full object-fill h-40 object-contain"
+                                src="https://live.staticflickr.com/65535/53125982670_ef30ca2ab0_c.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg">Juego Mundo
+                                    Abierto</div>
+                                <img class="float-left invert-black-to-white"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Unity</p>
+                                <p class="text-base">Video juego de mundo abierto, el objetivo es obtener todas las
+                                    monedas necesarias para terminar el juego, se implementaron particulas, LandScapes y
+                                    Follage
+                                </p>
+                                <div class="text-sm text-blue-500 flex justify-around pt-6">
+                                    <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                        href="https://github.com/LuisAlberto22/JuegoMundoAbiertoBasico">
+                                        <i class="fa-brands fa-github fa-2xl"></i>
+                                        Repositorio Git
+                                    </a>
+                                    <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                        href="#">
+                                        <i class="fa-solid fa-gamepad fa-2xl"></i>
+                                        !Pruebame¡
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full h-40 object-fill"
+                                src="https://live.staticflickr.com/65535/53125742565_2889f9449a.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg">Juego Asteroides
+                                </div>
+                                <img class="float-left invert-black-to-white"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Unity</p>
+                                <p class="text-base">Video juego de naves, el objetivo es collecionar las capsulas que
+                                    arrojan los Asteroides al destruirlos, consta de 3 niveles
+                                </p>
+                                <div class="text-sm text-blue-500 flex justify-around h-full pt-6">
+                                    <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                        href="https://github.com/LuisAlberto22/JuegoDeNave">
+                                        <i class="fa-brands fa-github fa-2xl"></i>
+                                        Repositorio Git
+                                    </a>
+                                    <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                        href="https://luisgar.itch.io/asteroides">
+                                        <i class="fa-solid fa-gamepad fa-2xl"></i>
+                                        !Pruebame¡
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                        class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                        <img class="w-full h-40 object-fill"
+                            src="https://live.staticflickr.com/65535/53125742565_2889f9449a.jpg"
+                            alt="Imagen de la tarjeta">
+                        <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                            <div class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg">Juego Plataforma Basico
+                            </div>
+                            <img class="float-left invert-black-to-white"
+                                src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png"
+                                alt="Imagen de la tarjeta">
+                            <p class="text-base font-bold text-matrix-text-bg">Unity</p>
+                            <p class="text-base">Video Juego de plataformas basico, el objetivo es recoger un numero de monedas y tiene un laberinto dinamico, este fue el primer juego que cree en mi escuela
+                            </p>
+                            <div class="text-sm text-blue-500 flex justify-around h-full pt-6">
+                                <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                    href="https://github.com/LuisAlberto22/JuegoDeNave">
+                                    <i class="fa-brands fa-github fa-2xl"></i>
+                                    Repositorio Git
+                                </a>
+                                <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                    href="https://luisgar.itch.io/asteroides">
+                                    <i class="fa-solid fa-gamepad fa-2xl"></i>
+                                    !Pruebame¡
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                        <div
+                            class=" bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full h-40 object-fill"
+                                src="https://live.staticflickr.com/65535/53125818418_a94efff78c.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg">Piano
+                                </div>
+                                <img class="float-left invert-black-to-white"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Official_unity_logo.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Unity</p>
+                                <p class="text-base">Simulador de Piano con 12 teclas hecho con HUD
+                                </p>  
+                            </div>
+                            <div class="text-sm text-blue-500 flex justify-around pt-6">
+                                <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                    href="https://github.com/LuisAlberto22/Piano">
+                                    <i class="fa-brands fa-github fa-2xl"></i>
+                                    Repositorio Git
+                                </a>
+                                <a class="text-sm text-blue-500 hover:underline flex items-center space-x-2"
+                                    href="https://luisgar.itch.io/piano-2d">
+                                    <i class="fa-solid fa-gamepad fa-2xl"></i>
+                                    !Pruebame¡
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div
+                            class="bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full h-40 object-fill"
+                                src="https://live.staticflickr.com/65535/53124503315_6887a56b2f_m.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4 flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-lg mb-2 text-matrix-text-bg">Render Abandonado</div>
+                                <img class="float-left invert-black-to-white"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Unreal_Engine_Logo.svg/2509px-Unreal_Engine_Logo.svg.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Unreal Engine</p>
+                                <p class="text-base">Un render hecho como proyecto de escuela en la Universidad de
+                                    Guadalajara
+                                </p>
+                            </div>
+                            <a class="text-sm mt-auto text-blue-500 hover:underline" href="https://youtu.be/AQG7NSaRIyQ">Video</a>
+                        </div>
+                        <div
+                            class="bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full h-40 object-fill"
+                                src="https://live.staticflickr.com/65535/53123500637_e768cc0da3_c.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4 flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-lg mb-2 text-matrix-text-bg">Render Nevado
+                                </div>
+                                <img class="w-full h-25 object-contain invert-black-to-white"
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Unreal_Engine_Logo.svg/2509px-Unreal_Engine_Logo.svg.png"
+                                    alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Unreal Engine</p>
+                                <p class="text-base">Un render hecho como parte de un curso utilizando Landscapes Quixel
+                                    y follage procedural
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                            <img class="w-full h-40 object-fill"
+                                src="https://live.staticflickr.com/65535/53124502640_46505db8d6_z.jpg"
+                                alt="Imagen de la tarjeta">
+                            <div class="px-6 py-4 flex-col text-center border-matrix-hover">
+                                <div class="font-bold text-matrix-500 text-lg mb-2 text-matrix-text-bg">Render Natural
+                                </div>
+                                <img class="invert-black-to-white"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Unreal_Engine_Logo.svg/2509px-Unreal_Engine_Logo.svg.png"
+                                alt="Imagen de la tarjeta">
+                                <p class="text-base font-bold text-matrix-text-bg">Unreal Engine</p>
+                                <p class="text-base">Un render hecho como parte de un curso utilizando Quixel y follage</p>
+                            </div>
+                            <a class="text-sm mt-auto text-blue-500 hover:underline" href="https://youtu.be/ZVZmUE5qwvE">Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contacto" class="text-matrix-text w-full pt-10 ">
+                <h1>Contacto</h1>
+                <div class="flex flex-wrap items-center justify-center gap-5">
+                    <div
+                        class="bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                        <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                            <i class="fa-regular fa-envelope"></i>
+                            <a href="mailto:guichos-mx@outlook.com" class="font-bold text-matrix-500 text-xl mb-2 text-matrix-text-bg block">guichos-mx@outlook.com
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                        <div class="px-6 py-4 flex-col text-center border-matrix-hover">
+                            <i class="fa-brands fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/luis-alberto-garcia-orozco-692167216/" class="font-bold text-matrix-500 text-sm mb-2 text-matrix-text-bg block">Linkdln</a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-matrix-footer col-span-4 h-full w-full max-w-xs flex-col overflow-hidden rounded-lg text-center shadow-lg md:col-span-1">
+                        <div class="px-6 py-4  flex-col text-center border-matrix-hover">
+                            <i class="fa-brands fa-facebook"></i>
+                            <a href="https://www.facebook.com/profile.php?id=100000648456327" class="font-bold text-matrix-500 text-sm mb-2 text-matrix-text-bg block">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer class="bg-matrix-footer text-center text-lg py-4 z-10 mt-auto">
+        <div class="grid grid-cols-3 text-center">
+            <div class="grid-col-1">
+                <a href="https://github.com/LuisAlberto22?tab=repositories">
+                    <i class="fa-brands fa-github fa-2xl" style="color: #7fff00;"></i>
+                    GitHub
+                </a>
+            </div>
+            <div class="grid-col-1">
+                <a href="https://www.hackerrank.com/guichos_mx?hr_r=1">
+                    <i class="fa-brands fa-hackerrank fa-2xl" style="color: #7fff00;"></i>
+                    hackerRank
+                </a>
+            </div>
+            <div class="grid-col-1">
+                <a href="https://www.linkedin.com/in/luis-alberto-garcia-orozco-692167216/">
+                    <i class="fa-brands fa-linkedin fa-2xl" style="color: #7fff00;"></i>
+                    Linkdln
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="tailwind.js"></script>
+<script src="https://kit.fontawesome.com/45bc0d1f39.js" crossorigin="anonymous"></script>
+<script src="Fondo.js"></script>
+
+</html>

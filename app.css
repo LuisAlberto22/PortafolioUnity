@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Quantico:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geostar+Fill&display=swap');
+
+.matrix-text{
+    color: #44F24F;
+}
+
+.matrix-text-bg{
+    color: #34Bf49;
+}
+
+.matrix-components{
+    background-color: #12732A;
+}
+
+.matrix-hover{
+    background-color: #01260A;
+}
+
+.matrix-footer{
+   background-color: #1A1A1A;
+}
+
+.matrix-bg{
+    background-color: #0D0D0D;
+}
+
+.invert-black-to-white {
+    filter: brightness(0) invert(1);
+}
