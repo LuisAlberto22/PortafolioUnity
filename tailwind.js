@@ -13,7 +13,6 @@ tailwind.config = {
                 'matrix-text-bg': '#34Bf49',
                 'matrix-components': '#12732A',
                 'matrix-hover': '#01260A',
-                'matrix-footer' : '#1A1A1A',
                 'matrix-bg': '#0D0D0D',
                 'matrix-text-blue': '#040DBF',
                 'matrix-text-bg-blue': '#072B73',
